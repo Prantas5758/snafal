@@ -89,59 +89,12 @@ apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubu
 reboot
  ```
 
-### 7. Info Websocket
+### 5. Info Websocket
 * Websocket harus menggunakan subdomain/domain dan sudah di pointing di cloudflare (CDN CLOUDFLARE)
 * Tanpa subdomain/domain mustahil bisa terhubung dengan bug yang berasal dari cloudflare
 *
 *
 *
-
-### 8. Edit Port SSL WS atau Ganti Port SSL(Manual)
-* ubah port yg mau di ubah ,jika 443 silahkan ubah tulisan yang ada 443
-* setelah di edit lalu di simpan (CTRL+X+Y dan enter)
-
-```html
-nano /etc/systemd/system/ws-tls.service
- ```
-```html
-nano /usr/local/bin/ws-tls
- ```
-```html
-nano /etc/default/sslh
- ```
-```html
-nano /etc/stunnel5/stunnel5.conf
- ```
-
-### 100 (Fix manual) Fix Error SSLH
-
-* Perbaiki sslh yang error di vps yang tidak support sslh
-* khusus yang vps nya tidak support sslh
-* matikan ws-tls
-```html
-systemctl stop ws-tls
-```
-* buat user sslh / edit passwd
-```html
-echo sslh:x:109:114::/nonexistent:/usr/sbin/nologin >> /etc/passwd
-```
-* note: edit passwd dan pindah sslh nya di atas vnstat
-
-* start sslh dan jalankan
-```html
-systemctl start sslh
-/etc/init.d/sslh start
-/etc/init.d/sslh restart
-```
-* lalu start ws-tls
-```html
-systemctl start ws-tls
-```
-```html
-reboot
-```
-*done
-
 
 # INFO Khusus SlowDNS
 • SSH Over DNS (SlowDNS)
