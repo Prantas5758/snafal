@@ -78,43 +78,6 @@ apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubu
 * • 22, 2253
 
 
-### 5. MENU, INFO ,UPDATE ,FIX
-* untuk menampilkan menu
-```html
-menu
-```
-* untuk update menu
-```html
-Menu No.11
-```
-* otomatis untuk memperbaiki error SSLH, WS-TLS
-```html
-sl-fix
-```
-```html
-reboot
-```
-* Perbaiki SSL ERROR
-* otomatis untuk memperbaiki error Sertifikat SSL/TLS dan SUBDOMAIN
-* perbaiki error di bagian acme domain
-* untuk update Sertifikat SSL/TLS
-```html
-slhost && certv2ray
-```
-* lalu restart
-```html
-restart
-```
-*
-*
-*
-
-### 6. FIX ERROR SSLH WS
-# Auto Fix Error SSLH + WS-TLS 443
-* 1 • Jika terjadi error di SSLH dan SSH WS-TLS nya,gunakan script ini untuk memperbaiki nya
-```html
-menu
- ```
 
 * 2 • di menu lalu pilih 17 (SL-FIX Menu)
 ```html
